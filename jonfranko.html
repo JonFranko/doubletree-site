@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jon Franko | Double Tree Industries</title>
+<meta name="description" content="Jon Franko, founder of Double Tree Industries. Business Systems Analyst, digital transformation, automation and data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Raleway:ital,wght@0,400;0,700;0,900;1,800;1,900&family=Inclusive+Sans&family=Zilla+Slab:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --peach: #fde7cf;
+    --red: #f83e02;
+    --orange: #f25c05;
+    --yellow: #ffc643;
+    --brown: #4b3c2b;
+    --tan: #d3bc9f;
+    --ink: #000;
+    --white: #fff;
+    --wrap: 1025px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body { margin: 0; background: var(--peach); color: var(--ink); font-family: Raleway, "Helvetica Neue", Arial, sans-serif; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .band img { width: 100%; }
+  .peach { background: var(--peach); }
+  .yellow { background: var(--yellow); }
+  .red { background: var(--red); }
+  :focus-visible { outline: 3px solid var(--brown); outline-offset: 3px; }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    background: #6b7d8c url("images/hero-bg.webp") center 30% / cover no-repeat;
+    color: var(--white);
+  }
+  .hero::before { content: ""; position: absolute; inset: 0; background: rgba(40, 45, 50, 0.32); }
+  .hero .wrap { position: relative; padding: 14px 18px 26px; }
+  .hero h1 {
+    margin: 0;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: clamp(3rem, 12.5vw, 8.1rem);
+    line-height: 0.82;
+    color: var(--orange);
+  }
+  .hero .tagline {
+    margin: 22px 0 0;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: clamp(1rem, 2.4vw, 1.4rem);
+    line-height: 1.35;
+    color: var(--orange);
+  }
+  .hero .pitch {
+    margin: 72px 0 0;
+    max-width: 680px;
+    font-weight: 900;
+    font-size: clamp(1rem, 2vw, 1.27rem);
+    line-height: 1.45;
+  }
+
+  /* About */
+  .about .wrap { display: grid; grid-template-columns: 1fr 435px; gap: 28px; }
+  .about .text { padding: 4px 0 24px 32px; }
+  .about h2 {
+    margin: 0;
+    font-family: Montserrat, sans-serif; font-weight: 800;
+    font-size: clamp(3.4rem, 9vw, 5.6rem); line-height: 1.05;
+    color: var(--orange);
+  }
+  .about h3 { margin: 6px 0 8px; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 1.55rem; line-height: 1.3; }
+  .about p { margin: 0 0 20px; font-family: Arial, sans-serif; font-size: 0.95rem; line-height: 1.45; }
+
+  /* Who I've worked with */
+  .clients { padding: 10px 0 24px; text-align: center; }
+  .clients h2 {
+    margin: 0;
+    font-family: Montserrat, sans-serif; font-weight: 700;
+    font-size: clamp(2.4rem, 7.4vw, 4.4rem);
+    color: var(--orange);
+  }
+  .clients .swoosh { margin: 0 auto; width: 85%; }
+  .clients .logos { margin: 110px auto 18px; width: 88%; }
+
+  /* Section headings */
+  .sec-head {
+    margin: 0;
+    font-family: Montserrat, sans-serif; font-weight: 800;
+    line-height: 0.95; text-transform: uppercase;
+  }
+
+  /* Experience */
+  .experience { padding: 20px 0 0; overflow: hidden; }
+  .experience .sec-head { padding-left: 52px; font-size: clamp(2.2rem, 6vw, 3.4rem); color: var(--red); }
+  .experience .sec-head span { display: block; padding-left: 78px; }
+  .job { max-width: 650px; margin-top: 44px; }
+  .job h3 {
+    margin: 0;
+    font-family: Montserrat, sans-serif; font-weight: 600;
+    font-size: 1.45rem; line-height: 1.6; letter-spacing: 0.12em;
+  }
+  .job p {
+    margin: 0;
+    font-size: 1.05rem; line-height: 1.6; letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .job b { font-family: Montserrat, sans-serif; font-weight: 700; }
+  .j1 { margin-left: 66px; margin-top: 32px; }
+  .j2 { margin-left: 264px; }
+  .j3 { margin-left: 88px; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .right { text-align: right; }
+  .row .job { margin-top: 44px; }
+  .r1 { padding: 0 28px 0 22px; margin-top: 22px; }
+  .r1 a { flex: none; width: 340px; }
+  .r1 .job { max-width: 640px; }
+  .r2 { padding: 0 34px 0 88px; margin-top: 10px; }
+  .r2 a { flex: none; width: 230px; }
+  .j6 { margin: 10px 28px 0 auto; max-width: 600px; }
+  .j7 { margin-left: 88px; margin-top: 72px; }
+  .r3 { align-items: flex-end; padding-right: 28px; margin-top: 14px; }
+  .r3 img { width: 356px; flex: none; }
+  .r3 .job { max-width: 660px; align-self: flex-start; margin-top: 30px; }
+
+  /* Projects */
+  .projects-head { display: grid; grid-template-columns: 557px 1fr; align-items: start; }
+  .projects-head h2 { padding: 40px 12px 0 4px; font-size: clamp(2.2rem, 5.4vw, 3.6rem); color: var(--red); }
+  .projects { padding-bottom: 36px; }
+  .proj { display: block; max-width: 640px; margin-top: 44px; background: none; border: 0; padding: 0; color: var(--ink); cursor: pointer; font: inherit; text-align: left; text-decoration: underline; text-underline-offset: 3px; }
+  .proj:first-of-type { margin-top: 12px; }
+  .proj .t { display: block; font-family: Montserrat, sans-serif; font-weight: 600; font-size: 1.45rem; line-height: 1.6; letter-spacing: 0.12em; text-transform: uppercase; }
+  .proj .d { display: block; font-size: 1.05rem; line-height: 1.6; letter-spacing: 0.1em; text-transform: uppercase; }
+  .proj.l { margin-left: 116px; }
+  .proj.r { margin-left: auto; margin-right: 86px; text-align: right; }
+  .proj:hover { color: var(--brown); }
+
+  /* Testimonials */
+  .testimonials { padding: 8px 0 72px; }
+  .testimonials .sec-head { padding-left: 56px; font-size: clamp(2.6rem, 7vw, 4.2rem); color: var(--orange); }
+  .kicker { margin: 4px 0 0; font-weight: 900; font-style: italic; font-size: 1.05rem; line-height: 1; text-transform: uppercase; letter-spacing: -0.02em; }
+  .testimonials .kicker { padding-left: 56px; }
+  .quotes { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 48px 40px; padding: 30px 48px 0 70px; }
+  blockquote { margin: 0; font-family: "Inclusive Sans", Raleway, sans-serif; text-align: center; }
+  .q-bubble {
+    grid-column: 1 / -1; justify-self: end; width: 640px; margin-right: -10px;
+    position: relative; background: var(--white); border: 6px solid #111; border-radius: 22px;
+    padding: 18px 22px; font-family: "Zilla Slab", Georgia, serif; font-weight: 700; font-size: 1.3rem; line-height: 1.5;
+    box-shadow: 8px 8px 0 #d9d9d9;
+  }
+  .q-bubble::before {
+    content: ""; position: absolute; left: -70px; top: 34px; width: 80px; height: 40px;
+    background: #111; clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  }
+  .q-box {
+    position: relative; background: #fd8f22; border-radius: 22px; padding: 30px 26px 26px;
+    font-size: 1.8rem; line-height: 1.55; color: #3a2a1a; max-width: 410px;
+  }
+  .q-box::after { content: ""; position: absolute; inset: 22px 22px 18px 22px; border: 3px solid #111; border-radius: 14px; pointer-events: none; }
+  .q-box .mk { position: absolute; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 4rem; line-height: 1; color: #111; }
+  .q-diamond {
+    align-self: center; justify-self: center; width: 280px; height: 280px; position: relative;
+    display: grid; place-items: center; font-size: 1.15rem; line-height: 1.45; color: #3a2a1a;
+  }
+  .q-diamond::before, .q-diamond::after {
+    content: ""; position: absolute; inset: 30px; transform: rotate(45deg); border: 3px solid #111;
+  }
+  .q-diamond::before { background: #fbab1e; }
+  .q-diamond::after { inset: 22px 38px 38px 22px; }
+  .q-diamond span { position: relative; z-index: 1; padding: 0 30px; }
+  .q-oct {
+    grid-column: 1 / -1; width: 620px; position: relative; background: #fd8f22;
+    clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
+    padding: 34px 40px; font-size: 1.6rem; line-height: 1.55; color: #3a2a1a;
+  }
+  .q-oct::after { content: ""; position: absolute; inset: 12px 30px 14px 14px; border: 3px solid #111; border-radius: 4px; }
+  .q-orange { position: relative; background: #ff8a00; border-radius: 18px; padding: 28px 28px; font-size: 1.4rem; line-height: 1.55; color: #3a2a1a; max-width: 420px; }
+  .q-orange::after { content: ""; position: absolute; inset: -14px 20px 20px -20px; border: 3px solid #111; border-radius: 18px; pointer-events: none; }
+  .q-tilt {
+    position: relative; align-self: center; background: #ffd60a; padding: 50px 26px; transform: rotate(-5deg);
+    font-weight: 700; font-style: italic; font-size: 1.45rem; line-height: 1.35;
+    border-top: 4px solid #111; border-bottom: 4px solid #111;
+  }
+  .q-wide {
+    grid-column: 1 / -1; position: relative; margin: 10px 20px 0 30px; background: #ffe680;
+    padding: 18px 46px; font-family: Raleway, sans-serif; font-size: 1.15rem; line-height: 1.55;
+    border: 8px solid #111; border-right-color: transparent; border-bottom-color: transparent;
+  }
+
+  /* Volunteer */
+  .volunteer { padding: 6px 0 22px; text-align: center; }
+  .volunteer .head { text-align: right; padding-right: 108px; }
+  .volunteer .sec-head { font-size: clamp(2.4rem, 6vw, 3.4rem); color: var(--orange); }
+  .volunteer .kicker { font-size: 1.6rem; }
+  .volunteer .photos { width: 77%; margin: 40px auto 0; }
+  .volunteer h3 { margin: 30px auto 0; max-width: 780px; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 1.55rem; line-height: 1.05; text-transform: uppercase; }
+  .volunteer p { margin: 2px auto 0; max-width: 790px; font-size: 1.1rem; line-height: 1.12; text-transform: uppercase; }
+
+  /* Degrees */
+  .degrees { padding: 26px 0 26px; }
+  .degrees .sec-head { padding-left: 52px; font-size: clamp(2.6rem, 6vw, 3.5rem); color: var(--orange); }
+  .degrees .kicker { padding-left: 54px; font-size: 1rem; }
+  .degree { margin: 22px 0 0 90px; max-width: 760px; }
+  .degree + .degree { margin-top: 12px; }
+  .degrees h3, .training h3 { margin: 0; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 1.85rem; line-height: 1.55; }
+  .degrees p { margin: 0; font-size: 1.25rem; line-height: 1.6; }
+  .training { margin: 52px 120px 0 120px; text-align: right; }
+  .training h2 { margin: 0 0 22px; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 2.6rem; }
+  .training .item { margin-top: 6px; }
+
+  /* Skills */
+  .skills .head { text-align: right; padding: 4px 60px 0 0; }
+  .skills .sec-head { font-size: clamp(2.4rem, 6vw, 3.4rem); color: var(--orange); }
+  .skills .kicker { font-size: 1.6rem; }
+
+  /* Footer */
+  .contact .band { position: relative; }
+  .hired { display: block; width: 100%; height: auto; aspect-ratio: 2050 / 790; object-fit: cover; background: #2a3550; }
+  @media (prefers-reduced-motion: reduce) { .hired { display: none; } .contact .band:first-child { background: url("images/hired.webp") center / cover; aspect-ratio: 2050 / 790; } }
+  .footer { background: var(--red); padding: 16px 12px; }
+  .footer ul { display: flex; justify-content: center; align-items: center; gap: 32px; margin: 0; padding: 0; list-style: none; }
+  .footer img { height: 70px; width: auto; }
+  .footer .li img { height: 48px; }
+  .footer a { display: block; border-radius: 6px; }
+
+  /* Dialogs */
+  dialog {
+    width: min(1024px, 94vw); max-height: 90vh; border: 0; border-radius: 4px; padding: 34px clamp(18px, 13vw, 180px) 30px;
+    background: var(--brown); color: var(--white); font-family: Montserrat, sans-serif; text-transform: uppercase;
+  }
+  dialog::backdrop { background: rgba(0, 0, 0, 0.6); }
+  dialog h2 { margin: 0; text-align: center; font-weight: 700; font-size: clamp(1.4rem, 3.4vw, 2.6rem); line-height: 1.05; }
+  dialog .sub { margin: 0 0 4px; text-align: center; font-weight: 700; font-size: clamp(1.1rem, 2.6vw, 2rem); line-height: 1.05; }
+  dialog h3 { margin: 0; font-weight: 700; font-size: 1.4rem; line-height: 1.15; }
+  dialog p, dialog li { margin: 0; font-size: 1.15rem; line-height: 1.15; text-align: justify; }
+  dialog ul { margin: 0; padding-left: 40px; }
+  dialog .pdf { display: block; width: 100px; margin: 40px auto 6px; }
+  dialog .close {
+    position: absolute; top: 10px; right: 14px; background: none; border: 0; color: var(--white);
+    font-size: 2rem; line-height: 1; cursor: pointer; font-family: Montserrat, sans-serif;
+  }
+
+  @media (max-width: 860px) {
+    .about .wrap { grid-template-columns: 1fr; }
+    .about .text { padding: 4px 20px 0; }
+    .projects-head { grid-template-columns: 1fr; }
+    .projects-head h2 { padding: 22px 20px 0; }
+    .experience .sec-head, .testimonials .sec-head, .testimonials .kicker, .degrees .sec-head, .degrees .kicker { padding-left: 20px; }
+    .experience .sec-head span { padding-left: 40px; }
+    .job, .j1, .j2, .j3, .j6, .j7, .proj.l, .proj.r { margin-left: 20px; margin-right: 20px; text-align: left; }
+    .row { flex-direction: column; align-items: stretch; padding: 0 !important; }
+    .row .job { margin-left: 20px; margin-right: 20px; text-align: left; }
+    .r1 a, .r2 a { width: 240px; margin: 0 auto; order: 2; }
+    .r3 img { width: 240px; order: 2; }
+    .job h3, .proj .t { font-size: 1.15rem; }
+    .job p, .proj .d { font-size: 0.95rem; }
+    .quotes { grid-template-columns: 1fr; padding: 24px 20px 0; gap: 40px; }
+    .q-bubble, .q-oct { width: auto; margin: 0; }
+    .q-bubble::before { display: none; }
+    .q-box, .q-orange { max-width: none; font-size: 1.3rem; }
+    .q-oct { font-size: 1.25rem; }
+    .q-wide { margin: 0; padding: 16px 20px; }
+    .volunteer .head, .skills .head { padding-right: 20px; }
+    .volunteer .photos { width: 92%; }
+    .volunteer h3, .volunteer p { padding: 0 16px; }
+    .degree { margin-left: 20px; margin-right: 20px; }
+    .degrees h3, .training h3 { font-size: 1.3rem; }
+    .degrees p { font-size: 1.05rem; }
+    .training { margin: 40px 20px 0; }
+    .training h2 { font-size: 1.9rem; }
+    .footer ul { gap: 18px; }
+    .footer img { height: 46px; }
+    .footer .li img { height: 32px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>JON(ATHAN)<br>FRANKO</h1>
+    <p class="tagline">Founder of Double Tree Industries<br>Business Systems Analyst | Digital<br>Transformation | Automation &amp; Data</p>
+    <p class="pitch">I own <a href="https://doubletreeindustries.com/">Double Tree Industries</a>, where I help organizations modernize operations with automation and analytics, and support individuals in telling their professional stories through branding and digital strategy. With a career spanning forestry, procurement, and enterprise IT, I bring cross-industry expertise to volunteer work, freelance projects, and formal roles.</p>
+  </div>
+</header>
+
+<section class="about peach">
+  <div class="wrap">
+    <div class="text">
+      <h2>ABOUT ME</h2>
+      <h3>Connecting strategy, technology, and storytelling from the forest floor up to corporate enterprise.</h3>
+      <p>My name is Jonathan, but if you’ve read this far you can call me Jon. I began my career in forestry, learning how to balance sustainability, negotiation, and community impact. Later, I transitioned into procurement and enterprise automation, where I led multi-million-dollar digital transformation projects and mentored global teams.</p>
+      <p>Today, through Double Tree Industries, I deliver a mix of consulting and personal branding services to help businesses modernize their operations and professionals share their story with clarity and impact. Whether in forests, conference rooms, or digital landscapes, my work has always been about connecting people to the tools, resources, and knowledge they need to thrive.</p>
+    </div>
+    <img src="images/about-photo.webp" alt="Jon Franko standing on a beach" width="870" height="1024">
+  </div>
+</section>
+
+<section class="clients peach">
+  <div class="wrap">
+    <h2>Who I’ve Worked With</h2>
+    <img class="swoosh" src="images/swoosh-top.webp" alt="" width="1740" height="76">
+    <img class="logos" src="images/logos.webp" width="1800" height="3876" loading="lazy"
+      alt="Thermo Fisher Scientific, Western Pennsylvania Conservancy, Giant Eagle, Digital Foundry at New Kensington, PPG, United Way of Southwestern Pennsylvania, Messer, Clear Lake Lumber, Linde, The Ohio State University, Wabtec Corporation, Muskingum Watershed Conservancy District, Inspire Brands">
+    <img class="swoosh" src="images/swoosh-bottom.webp" alt="" width="1740" height="160">
+  </div>
+</section>
+
+<section class="red band">
+  <div class="wrap">
+    <h2 class="sr-only">Portfolio Highlights</h2>
+    <img src="images/portfolio-band.webp" alt="Photos of Jon at work and presenting" width="2050" height="1166" loading="lazy">
+  </div>
+</section>
+
+<section class="experience yellow">
+  <div class="wrap">
+    <h2 class="sec-head">Professional<span>Experience</span></h2>
+
+    <div class="job j1">
+      <h3>BUSINESS ANALYSIS AND PROCESS DEFINITION — THERMO FISHER SCIENTIFIC (2026)</h3>
+      <p>Document previously undocumented or out of date internal pricing processes to support knowledge transfer and operational continuity, work that backs Thermo Fisher’s mission to make the world healthier, cleaner, and safer.</p>
+    </div>
+
+    <div class="job j2">
+      <h3>PROCESS IMPROVEMENT &amp; PROJECT WORK — THERMO FISHER SCIENTIFIC (2026)</h3>
+      <p>Built a semi-automated error-classification tool using PowerQuery and ChatGPT Enterprise that identifies roughly 40% of EDI transmission errors on the first run.</p>
+    </div>
+
+    <div class="job j3">
+      <h3>PRICING ANALYTICS AND OPERATIONS — THERMO FISHER SCIENTIFIC (2026)</h3>
+      <p>Maintain customer-specific contract pricing, list pricing, and tiered discount structures across roughly 6.5 million products on a proprietary mainframe system.</p>
+    </div>
+
+    <div class="row r1">
+      <a href="https://docs.doubletreeindustries.com/JonFrankoResume.pdf"><img src="images/resume-burst.webp" alt="Download my resume" width="680" height="510"></a>
+      <div class="job right">
+        <h3>OPERATIONS &amp; DATA ACCURACY — GIANT EAGLE (2025)</h3>
+        <p>Apply lean workflows and data-driven decisions to maintain pricing accuracy, manage markdowns, and reduce product loss. Implement pricing incentives to align supply with demand and ensure positive customer outcomes.</p>
+      </div>
+    </div>
+
+    <div class="row r2">
+      <div class="job">
+        <h3>ENTERPRISE AUTOMATION STRATEGY — PPG INDUSTRIES (2019-2024)</h3>
+        <p>Owned the lifecycle of 30+ automation solutions, enabling <b>$2.25M+</b> in annual value while aligning governance, finance, and IT systems.</p>
+      </div>
+      <a href="https://jonsjobblog.com/"><img src="images/blog-icon.webp" alt="Read my blog" width="460" height="448"></a>
+    </div>
+
+    <div class="job j6 right">
+      <h3>POWER BI DASHBOARDS &amp; ANALYTICS — PPG INDUSTRIES (2021-2024)</h3>
+      <p>Designed KPI dashboards and variance trend reports that reduced support incidents by <b>80%</b>, while mentoring analysts as team Power BI champion.</p>
+    </div>
+
+    <div class="job j7">
+      <h3>PROCUREMENT ANALYTICS — MESSER LLC (2018-2019)</h3>
+      <p>Built Tableau dashboards integrating SAP &amp; Salesforce to improve financial transparency, enabling risk forecasting and spend insight.</p>
+    </div>
+
+    <div class="row r3">
+      <img src="images/hats.webp" alt="Meme of a man wearing stacked hats labeled Project Manager, Product Owner, and Business Analyst" width="712" height="1024" loading="lazy">
+      <div class="job right">
+        <h3>FORESTRY &amp; TECHNOLOGY — CLEAR LAKE LUMBER (2014-2017)</h3>
+        <p>Negotiated purchasing of timber contracts with values up to <b>$250,000</b> and supported rollout of ESRI GIS, transitioning the company from paper to digital mapping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects peach">
+  <div class="wrap">
+    <div class="projects-head">
+      <img src="images/projects-photo.webp" alt="Jon competing in a timbersports event" width="1114" height="484" loading="lazy">
+      <h2 class="sec-head">Educational &amp; Research Projects</h2>
+    </div>
+
+    <button class="proj l" data-open="d-loan">
+      <span class="t">Loan Default Predictive Modeling (MBA)</span>
+      <span class="d">Applied machine learning to 80,000+ observations (763 variables). Combined classification and regression to predict defaults and losses, reducing MAE from 5.2 → 1.72.</span>
+    </button>
+    <button class="proj r" data-open="d-hr">
+      <span class="t">HR Audit Comparative Study (MBA)</span>
+      <span class="d">Interviewed HR leaders across Eaton, Timken, Heritage Valley, and Main Street Gourmet. Produced cross-industry recommendations on compliance and culture.</span>
+    </button>
+    <button class="proj l" data-open="d-faking">
+      <span class="t">Applicant Faking in Selection (MBA)</span>
+      <span class="d">Explored organizational risk of dishonest applicants; built cases from real-world examples (George O’Leary, Walmart VP). Recommended structured interviews as a cost-effective safeguard.</span>
+    </button>
+    <button class="proj r" data-open="d-ethics">
+      <span class="t">Ethical &amp; Opinion Papers (MBA)</span>
+      <span class="d">Position and opinion papers on cases including Graham Corporation, Cotter Ladder Co., and Orkin Extermination. Applied stakeholder, liability, and governance frameworks to corporate dilemmas, and explored broader themes in strategy, innovation, and responsibility.</span>
+    </button>
+    <button class="proj l" data-open="d-trees">
+      <span class="t">Native Trees Brochure (Undergrad)</span>
+      <span class="d">Developed an educational guide mapping native vs. non-native trees for the Ohio State University campus. Combined ecological and economic forestry perspectives</span>
+    </button>
+  </div>
+</section>
+
+<section class="red band">
+  <div class="wrap">
+    <h2 class="sr-only">Community &amp; Collaboration</h2>
+    <img src="images/community-band.webp" alt="Jon rappelling down a building in downtown Pittsburgh" width="2050" height="694" loading="lazy">
+  </div>
+</section>
+
+<section class="testimonials yellow">
+  <div class="wrap">
+    <h2 class="sec-head">Testimonials</h2>
+    <p class="kicker">Here’s what colleagues and clients<br>have shared about working with me:</p>
+    <div class="quotes">
+      <blockquote class="q-bubble">“Jon is a well-rounded Business Analyst with an outstanding attitude, a strong grasp of requirements, and a positive presence that any team would be fortunate to have.” - Coworker</blockquote>
+      <blockquote class="q-box"><span class="mk" style="top:-14px;right:10px">”</span>“Jon brings positive energy and motivates every team he’s on — a natural collaborator.“<br>- Coworker<span class="mk" style="bottom:-26px;left:6px">“</span></blockquote>
+      <blockquote class="q-diamond"><span>“I wasn’t expecting output this good — it’s excellent work.”<br>- Early Customer</span></blockquote>
+      <blockquote class="q-oct">“He makes complex processes simple and accessible for everyone.” - Coworker</blockquote>
+      <blockquote class="q-orange">“Patient and clever, his deliverables gave us everything we needed to build reliable automations.”<br>- Coworker</blockquote>
+      <blockquote class="q-tilt">"The best Business Analyst I’ve worked with across two companies.”<br>- Manager</blockquote>
+      <blockquote class="q-wide">“His ability to engage with stakeholders across diverse domains—whether technical, operational, or strategic—is truly impressive. He brings clarity and cohesion to complex projects, ensuring alignment and momentum even in fast-paced moments.” - Coworker</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="volunteer peach">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="sec-head">Volunteer<br>Leadership</h2>
+      <p class="kicker">Giving Back</p>
+    </div>
+    <img class="photos" src="images/volunteer-photos.webp" alt="Jon volunteering on construction, tree planting, and painting projects, and with the Western Pennsylvania Conservancy Emerging Leaders group" width="1580" height="1100" loading="lazy">
+    <h3>Western Pennsylvania Conservancy – Emerging Leaders Advisory Committee Co-Chair (2023–Present)</h3>
+    <p>Lead digital engagement strategy driving 87% increase in social media engagement and 74% improvement in engagement rate through data-driven content strategy and community storytelling as social media chair. Active in land stewardship projects restoring native habitats and urban reforestation through tree planting.</p>
+  </div>
+</section>
+
+<section class="red band">
+  <div class="wrap">
+    <h2 class="sr-only">Education &amp; Training: My Foundations &amp; Continuous Learning</h2>
+    <img src="images/education-band.webp" alt="Jon paddleboarding on a river" width="2050" height="492" loading="lazy">
+  </div>
+</section>
+
+<section class="degrees yellow">
+  <div class="wrap">
+    <h2 class="sec-head">Degrees</h2>
+    <p class="kicker">Where I’ve Studied</p>
+    <div class="degree">
+      <h3>MBA, Kent State University (2017–2018)</h3>
+      <p>Relevant Coursework: Advanced Data Mining &amp; Analytics, International Emerging Markets &amp; Enterprises (India), Global Supply Management &amp; Sustainability Strategies.</p>
+    </div>
+    <div class="degree">
+      <h3>B.S. Forest Ecosystem Science &amp; Management, The Ohio State University (2009–2014)</h3>
+      <p>Minor: Geographic Information Science.<br>Activities: Chief Justice, Alpha Nu Chapter of Pi Kappa Phi Fraternity.<br>SENR Student Council Representative for Forestry Forum.<br>International Research (China), focusing on forest management practices, cultural landscapes, and ecosystem sustainability.</p>
+    </div>
+
+    <div class="training">
+      <h2>Additional Training:</h2>
+      <div class="item"><h3>Lean Six Sigma Yellow &amp; Green Belt (PPG, 2023)</h3><p>80 hours of DMAIC project leadership training and project focused on defect reduction.</p></div>
+      <div class="item"><h3>Power BI Champion (PPG, 2023)</h3><p>Advanced reporting and analytics with Data &amp; Analytics CoE.</p></div>
+      <div class="item"><h3>Manufacturing &amp; Digital Fundamentals - LVL 1 (Penn State Digital Foundry, 2025)</h3><p>40 hours on robotics, IoT, AR/VR, product design, and conflict resolution.</p></div>
+      <div class="item"><h3>Manufacturing &amp; Digital Fundamentals - LVL 2 (Penn State Digital Foundry, 2025)</h3><p>40 hours on advanced manufacturing, MES, SCADA, PLCs, vision systems, and change management.</p></div>
+      <div class="item"><h3>Machine Control Academy (Penn State Digital Foundry, 2025)</h3><p>Hands-on PLC programming and troubleshooting across Siemens, Rockwell/Allen-Bradley, and Phoenix Contact platforms, covering ladder logic, HMI systems, and machine control system design.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="skills peach">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="sec-head">Skills &amp; Tools</h2>
+      <p class="kicker">What I Bring to the Table</p>
+    </div>
+    <img src="images/skills.webp" width="2050" height="3080" loading="lazy"
+      alt="Skills collage. Data and Analytics: R, Python, Tableau, SQL, Excel, Power BI, ChatGPT. ERP Working Knowledge: Workday, Salesforce, ServiceNow, UiPath, QAD, SAP, Oracle, ArcGIS. Leadership and Process: Agile Product Ownership and Project Management, Lean Six Sigma, Cross-Functional Collaboration, Visio, Program and Product Leadership. Communication and Storytelling: Digital Storytelling, Web Portfolio Design, Content Strategy, Personal Branding, Canva.">
+  </div>
+</section>
+
+<section class="contact">
+  <div class="band"><video class="hired" src="images/hired.mp4" poster="images/hired.webp" width="1280" height="494" autoplay muted loop playsinline preload="metadata" aria-label="Video of Jon welding the words HIRE ME into a steel plate"></video></div>
+  <div class="band">
+    <h2 class="sr-only">Ping me for a chat</h2>
+    <img src="images/ping.webp" alt="Ping me for a chat, over a photo of a sailboat cove" width="2050" height="950" loading="lazy">
+  </div>
+  <footer class="footer">
+    <ul>
+      <li class="li"><a href="https://www.linkedin.com/in/jonpfranko/"><img src="images/icon-linkedin.webp" alt="LinkedIn" width="396" height="96"></a></li>
+      <li><a href="https://www.instagram.com/jon.franko/"><img src="images/icon-instagram.webp" alt="Instagram" width="140" height="142"></a></li>
+      <li><a href="https://calendly.com/jonfranko11"><img src="images/icon-calendar.webp" alt="Book a time on Calendly" width="142" height="142"></a></li>
+      <li><a href="mailto:jon@doubletreeindustries.com"><img src="images/icon-email.webp" alt="Email Jon" width="180" height="140"></a></li>
+    </ul>
+  </footer>
+</section>
+
+<!-- Project detail popups -->
+<dialog id="d-loan" aria-labelledby="d-loan-t">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="d-loan-t">📊 Loan Default Predictive Modeling</h2>
+  <p class="sub">MBA Capstone · Kent State University</p>
+  <h3>Context</h3>
+  <p>As part of my MBA coursework, I worked with a dataset of 80,000+ loan records and 763 variables. The objective was to design a predictive model that could help lenders better assess financial risk.</p>
+  <h3>Problem</h3>
+  <p>Traditional models often failed to accurately predict both:</p>
+  <ul><li>Loan default likelihood (whether a borrower would default), and</li><li>Default loss amounts (the financial impact when a loan defaulted).</li></ul>
+  <p>This limited decision-making accuracy for lenders managing large portfolios.</p>
+  <h3>Solution</h3>
+  <p>I developed a two-step predictive approach:</p>
+  <ul><li>Classification model — to predict the probability of default.</li><li>Regression model (LASSO) — to estimate the expected loss when defaults occurred.</li><li>Combined methods improved overall accuracy.</li></ul>
+  <p>Tools &amp; techniques: Excel (data prep), R (regression), machine learning methods<br>Other research and analysis</p>
+  <h3>Outcome</h3>
+  <ul><li>Reduced mean absolute error (MAE) from 5.2 → 1.72.</li><li>Delivered a model framework replicable by future cohorts.</li><li>Demonstrated how data-driven modeling can improve lender decision-making and reduce financial risk.</li></ul>
+  <a href="https://docs.doubletreeindustries.com/Loan%20Default%20analysis.pdf"><img class="pdf" src="images/icon-pdf.webp" alt="Download the PDF"></a>
+</dialog>
+
+<dialog id="d-hr" aria-labelledby="d-hr-t">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="d-hr-t">🧾 HR Audit Comparative Study</h2>
+  <p class="sub">MBA Research Project · Kent State University</p>
+  <h3>Context</h3>
+  <p>Interviewed HR leaders at Eaton, Timken, Heritage Valley Health Systems, and Main Street Gourmet to understand how audits vary by industry and scale.</p>
+  <h3>Problem</h3>
+  <p>Organizations often struggle to balance:</p>
+  <ul><li>Compliance requirements (costly but necessary), and</li><li>Cultural audits (ensuring employee engagement and organizational health).</li></ul>
+  <h3>Solution</h3>
+  <p>Conducted cross-industry interviews, synthesized findings, and benchmarked HR audit practices.</p>
+  <p>Tools &amp; methods: structured interviews, comparative analysis, presentation synthesis.</p>
+  <h3>Outcome</h3>
+  <ul><li>Identified key differences between compliance-focused and culture-focused audits.</li><li>Recommended balanced approaches tailored by organization size and sector.</li></ul>
+  <a href="https://docs.doubletreeindustries.com/HR%20Audits.pdf"><img class="pdf" src="images/icon-pdf.webp" alt="Download the PDF"></a>
+</dialog>
+
+<dialog id="d-faking" aria-labelledby="d-faking-t">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="d-faking-t">🎭 Applicant Faking in Selection</h2>
+  <p class="sub">MBA Position Paper · Kent State University</p>
+  <h3>Context</h3>
+  <p>Examined whether dishonesty in job applications and interviews is a minor nuisance or a serious organizational risk.</p>
+  <h3>Problem</h3>
+  <p>Unverified applicant claims can lead to costly mis-hires and reputational damage.</p>
+  <p>Examples included George O’Leary (Notre Dame football coach) and a Walmart VP.</p>
+  <h3>Solution</h3>
+  <ul><li>Built arguments from both perspectives in a debate-style project.</li><li>Proposed structured interviews as a cost-effective way to reduce faking.</li></ul>
+  <p>Tools &amp; methods: literature review, case study debate, HRM frameworks.</p>
+  <h3>Outcome</h3>
+  <ul><li>Strengthened organizational awareness of applicant deception.</li><li>Demonstrated HR’s role in safeguarding hiring integrity.</li></ul>
+  <a href="https://docs.doubletreeindustries.com/Applicant%20Faking.pdf"><img class="pdf" src="images/icon-pdf.webp" alt="Download the PDF"></a>
+</dialog>
+
+<dialog id="d-ethics" aria-labelledby="d-ethics-t">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="d-ethics-t">⚖️ Ethical Dilemmas &amp; Opinion Papers in Corporate Governance</h2>
+  <p class="sub">MBA Coursework · Kent State University</p>
+  <h3>Context</h3>
+  <p>Explored complex corporate challenges through two formats:</p>
+  <ul><li>Ethical dilemma case studies (Graham Corporation, Cotter Ladder Co., Orkin Extermination).</li><li>Opinion papers on broader business ethics topics (Fiat Chrysler emissions, distance learning strategy, tech innovation).</li></ul>
+  <h3>Problem</h3>
+  <p>Organizations often struggle to balance legal compliance, profitability, innovation, and public trust while navigating evolving business environments.</p>
+  <h3>Solution</h3>
+  <p>Produced structured case analyses and opinion pieces applying stakeholder mapping, liability frameworks, and governance models alongside forward-looking commentary on technology and education.</p>
+  <h3>Outcome</h3>
+  <ul><li>Demonstrated ability to apply legal/ethical frameworks to both real corporate dilemmas and contemporary business debates.</li><li>Showcased critical thinking, persuasive writing, and the ability to weigh long-term reputational impact.</li></ul>
+  <a href="https://docs.doubletreeindustries.com/Ethical%20Dilemas%20and%20Opinion%20Papers.pdf"><img class="pdf" src="images/icon-pdf.webp" alt="Download the PDF"></a>
+</dialog>
+
+<dialog id="d-trees" aria-labelledby="d-trees-t">
+  <button class="close" aria-label="Close">×</button>
+  <h2 id="d-trees-t">🌳 Native Trees Brochure</h2>
+  <p class="sub">Undergraduate Project · The Ohio State University</p>
+  <h3>Context</h3>
+  <p>Developed an educational brochure for the OSU campus arboretum.</p>
+  <h3>Problem</h3>
+  <p>Students and visitors lacked an accessible resource distinguishing native vs. non-native tree species.</p>
+  <h3>Solution</h3>
+  <ul><li>Researched tree species, mapped locations, and created descriptive entries.</li><li>Designed an easy-to-read brochure for campus distribution.</li><li>Tools &amp; methods: GIS mapping, forestry research, educational design.</li></ul>
+  <h3>Outcome</h3>
+  <ul><li>Improved public understanding of ecological and economic forestry values.</li><li>Supported OSU’s sustainability and outreach goals.</li></ul>
+  <a href="https://docs.doubletreeindustries.com/Native%20Trees%20Brocure%20OSU.pdf"><img class="pdf" src="images/icon-pdf.webp" alt="Download the PDF"></a>
+</dialog>
+
+<script>
+  document.querySelectorAll('[data-open]').forEach(function (btn) {
+    btn.addEventListener('click', function () { document.getElementById(btn.dataset.open).showModal(); });
+  });
+  document.querySelectorAll('dialog').forEach(function (d) {
+    d.querySelector('.close').addEventListener('click', function () { d.close(); });
+    d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+  });
+</script>
+</body>
+</html>
